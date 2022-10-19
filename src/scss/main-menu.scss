@@ -1,0 +1,51 @@
+@import 'variables.scss';
+
+.main-menu {
+    display: flex;
+    gap: 2.6rem;
+    &--mr--auto {
+        margin-left: auto;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: $textColor;
+        gap: 0.5rem;
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        gap: 1rem;
+        &--768px {
+            display: none;
+        }
+    }
+
+    &--desctop {
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .main-menu__list--768px {
+        display: flex;
+    }
+}
+
+@media (min-width: 1366px) {
+    .main-menu--desctop {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+

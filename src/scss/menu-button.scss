@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    background-color: $menuButtonColor;
+    cursor: pointer;    
+    outline-color: $beforeColor;
+
+    &__desctop {
+        justify-content: space-between;
+        width: auto;
+        height: auto;
+        background-color: $bgColor;
+        border-radius: 0;
+        font-family: TT lakes, sans-serif;
+        font-size: 16px;
+        white-space: nowrap;
+        gap: 0.17rem;
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+        padding: 0.3rem;
+    }
+
+    &:active {
+        transform: scale(0.97);
+        transition: 200ms all;
+    }
+
+    &--ml-auto {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1366px) {
+    .menu-button {
+        &--close {
+            display: none;
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,42 @@
+@import 'variables.scss';
+
+
+.lang-selector {
+    display: flex;
+    gap: 0.5rem;
+
+    &--pt--1_5rem {
+        padding-top: 1.5rem;
+    }
+
+    &__btn {
+        border: none;
+        background-color: inherit;
+        color: $textColor;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: TT lakes, sans-serif;
+        transition: 200ms all;
+        &:hover {
+            filter: drop-shadow(1px 6px 4px $textNavColor);
+            transform: translate(0, -1px) scale(1.02);      
+        }
+        &--active {
+            color: $textNavColor;
+            &:hover {
+                filter: none;
+                transform: none; 
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

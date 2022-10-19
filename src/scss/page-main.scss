@@ -1,0 +1,22 @@
+.page-main {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 320px;
+}
+
+@media (min-width: 768px) {
+    .page-main {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .page-main {
+        min-width: 1366px;
+        max-width: 1440px;
+    }
+}
+
+

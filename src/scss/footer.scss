@@ -1,0 +1,46 @@
+@import 'variables.scss';
+
+.footer {
+    min-width: 320px;
+    max-width: 320px;
+    padding: 2rem 1rem;
+    background-color: $bgColor;
+    display: grid;
+    gap: 1rem;
+
+    &__text {
+        font-size: 0.875rem;
+        text-align: center;
+        color: $textNavColor;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        max-width: 768px;
+        grid-template: auto / repeat(3, minmax(14rem, 1fr));
+        justify-content: space-between;
+
+        &__text {
+            &--left {
+                text-align: left;
+            }
+            &--right {
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .footer {
+        max-width: 1120px;
+        min-width: 1120px;
+
+        &__text {
+            &--center {
+                text-align: left;
+            }
+        }
+    }
+}

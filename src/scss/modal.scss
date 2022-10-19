@@ -1,0 +1,108 @@
+@import 'variables.scss';
+
+.modal {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    display: none;
+    max-width: 360px;
+    min-width: 320px;
+    min-height: 100vh;
+    background: $bgWhiteColor;
+    transition: 350ms all ease-in-out ;
+    z-index: 2;
+    &--feedback--show {
+        display: block;
+    }
+    &--feedback--visible {
+        opacity: 1;
+        right: 0;
+    }
+
+    &--callback--show {
+        display: block;
+    }
+    &--callback--visible {
+        opacity: 1;
+        right: 0;
+    }
+
+    &__container {
+        padding: 1.5rem 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__close-button {
+        align-self: flex-start;
+    }
+
+    &__title {
+        align-self: flex-start;
+        position: relative;
+        padding-top: 1.5rem;
+        font-size: 1.5rem;
+        letter-spacing: -0.6px;
+        color: $textColor;
+        &::before {
+            content: "";
+            width: 0.25rem;
+            height: 2.5rem;
+            background-color: $beforeColor;
+            border-radius: 0 0.5rem 0.5rem 0;
+            position: absolute;
+            left: -1rem;
+        }
+    }
+
+    &__info {
+        font-size: 0.875rem;
+        line-height: 1rem;  
+        color: $textNavColor;
+        &--atten {
+            color: $menuButtonColor;
+        }
+    }
+
+    &__submit-button {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $menuButtonColor;
+        height: 2rem;
+        width: 7.4rem;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.75rem;
+        color: $bgWhiteColor;
+        font-family: "TT Lakes";
+        font-size: 0.75rem;
+        font-weight: bold;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        cursor: pointer;    
+        outline-color: $beforeColor;
+        &:active {
+            transform: scale(0.97);
+            transition: 200ms all;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .modal {
+        box-shadow: 
+                -2px 0px 4px rgba(69, 79, 126, 0.02), 
+                16px 0px 52px rgba(14, 24, 80, 0.2);
+
+        &__close-button {
+            position: absolute;
+            left: -4.5rem;
+            top: 2.75rem;
+        }
+    }
+}

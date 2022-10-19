@@ -1,0 +1,56 @@
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+
+@import 'page-main.scss';
+@import 'header.scss';
+@import 'main-menu.scss';
+@import 'menu-button.scss';
+@import 'about.scss';
+@import 'nav-menu.scss';
+@import 'info-content.scss';
+@import  'slide-card.scss';
+@import 'slider.scss';
+@import 'content-button.scss';
+@import 'footer.scss';
+@import 'price-card.scss';
+@import 'mobile-menu.scss';
+@import 'nav-list.scss';
+@import 'contacts.scss';
+@import 'lang-selector.scss';
+@import 'overlay.scss';
+@import 'modal.scss';
+@import 'feedback.scss';
+
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TTLakes-Regular"),
+       url("../fonts/TTLakes-Regular.woff");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TTLakes-Bold"),
+       url("../fonts/TTLakes-Bold.woff");
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+  font-family: TT lakes, sans-serif;
+}
+
+

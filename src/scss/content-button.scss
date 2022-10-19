@@ -1,0 +1,33 @@
+@import 'variables.scss';
+
+.content-button {
+    display: none;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: $bgColor;
+    font-size: 16px;
+    padding-top: 1.5rem;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    outline-color: $contentButtonColor;
+
+    &__img {
+        &--show-all {
+            transform: rotate(180deg);
+            transition: 300ms all;
+        }
+    }
+
+    &--about {
+        display: flex;
+    }
+}
+
+@media(min-width: 768px) {
+    .content-button {
+        display: flex;
+    }
+}
+

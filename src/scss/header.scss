@@ -1,0 +1,113 @@
+@import 'variables.scss';
+
+
+.header {
+    min-width: 320px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: $bgWhiteColor;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__wrapper {
+        position: relative;
+        padding: 1.1rem 1rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid $headerBorderColor;
+        &::before {
+            content: "";
+            width: 0.125rem;
+            height: 2rem;
+            background-color: $headerDividerColor;
+            border-radius: 1rem;
+            position: absolute;
+            left: 11.6rem;
+        }
+    }
+
+    &__title-wrapper {
+        display: flex;
+        padding: 1.55rem 0 0 1rem;
+        align-items: end;
+        justify-content: space-between;
+        background-color: $bgColor;
+    }
+
+    &__title {
+        position: relative;
+        font-size: 28px;
+        color: $textColor;
+        background-color: $bgColor;
+        &::before {
+            content: "";
+            width: 0.25rem;
+            height: 2.5rem;
+            background-color: $beforeColor;
+            border-radius: 0 0.5rem 0.5rem 0;
+            position: absolute;
+            left: -1rem;
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .header {
+        max-width: 768px;
+
+        &__wrapper {
+            padding: 1.1rem 1.5rem;
+            gap: 2.55rem;
+            &::before {
+                background-color: $headerDividerColor;
+                left: 5.3rem;
+            }
+            &::after {
+                content: "";
+                width: 0.125rem;
+                height: 2rem;
+                background-color: $headerDividerColor;
+                border-radius: 1rem;
+                position: absolute;
+                left: 39.1rem;
+            }
+        }
+
+        &__title-wrapper {
+            padding: 1.55rem 0 0 1.5rem;
+        }
+    
+        &__title::before {
+            left: -1.5rem;  
+        }
+    }
+
+    @media (min-width: 1366px) {
+        .header {
+            max-width: 1120px;
+            min-width: 1120px;
+            background-color: $bgColor;
+
+            &__title-wrapper {
+                padding: 2rem 2rem 0 2rem;
+                align-items: end;
+                justify-content: space-between;
+            }
+
+            &__wrapper {
+                display: none;
+            }
+
+            &__title::before {
+                left: -2rem;  
+            }
+        }      
+    }
+}

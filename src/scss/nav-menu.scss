@@ -1,0 +1,43 @@
+@import 'variables.scss';
+
+
+.nav-menu {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: scroll; 
+    list-style: none;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        &--active {
+            border: 2px solid $navBorderColor;
+            border-radius: 6px;
+            background-color: $bgWhiteColor;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 0.45rem 1rem;
+        text-decoration: none;
+        color: $textNavColor;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        white-space: nowrap;
+        outline-color: $contentButtonColor;
+    }
+}
+
+@media (min-width: 1366px) {
+    .nav-menu {
+        flex-wrap: wrap;
+        overflow: auto; 
+
+        &__item {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
