@@ -10,7 +10,9 @@ function navMenu(menuSelector, itemsSelector) {
         if (e.target != navMenu ) {
             menuItems.forEach((item) => {
                 item.classList.remove(`${itemsSelector}--active`);
-                if (e.path[1] == item) {
+
+                const selectedItem = e.path[1];
+                if (selectedItem == item) {
                     item.classList.add(`${itemsSelector}--active`);
                 }
             })

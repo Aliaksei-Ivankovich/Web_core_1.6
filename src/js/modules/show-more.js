@@ -1,7 +1,7 @@
 'use strict';
 
 
-function showMore (sectionSelector, btnSelector, wrapperSelector, toggleClass, btnText) {
+function showMore ({sectionSelector, btnSelector, wrapperSelector, toggleClass, btnText}) {
 
 const section = document.querySelector(`.${sectionSelector}`);
 const btn = section.querySelector(`.${btnSelector}`);

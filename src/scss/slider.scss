@@ -44,9 +44,10 @@
         transition: height 500ms ease-out;
         &--price {
             height: auto;
+            display: none;
         }
 
-        &__wrapper {
+        &__wrapper { 
             display: grid;
             grid-template: auto / repeat(3, minmax(14rem, 1fr));
             column-gap: 1.5rem;

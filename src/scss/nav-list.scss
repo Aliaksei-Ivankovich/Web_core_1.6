@@ -22,19 +22,19 @@
             left: -1.5rem;
             width: 0;
             height: 100%;
-            background: linear-gradient(to right, #41F6D7, rgba(0, 0, 0, 0.1) 2%, rgba(0, 0, 0, 0.05), #ffffff);
+            background: linear-gradient(to right, $beforeColor, rgba(0, 0, 0, 0.1) 2%, rgba(0, 0, 0, 0.05), $bgWhiteColor);
             transition: opacity, width 350ms ease-in-out;
         }
         &:hover {
             color: black;
             &::after {
                 opacity: 1;
-                width: 100%;
+                width: calc(100% + 1.5rem);
             }
         }
 
         &--active {
-            color: #7E7E82;
+            color: $textNavColor;
             &:hover::after {
                 opacity: 0;
                 width: 0;
@@ -43,7 +43,7 @@
                 content: "";
                 width: 0.25rem;
                 height: 2rem;
-                background-color: #41F6D7;
+                background-color: $beforeColor;
                 border-radius: 0 0.5rem 0.5rem 0;
                 position: absolute;
                 left: -1.5rem;

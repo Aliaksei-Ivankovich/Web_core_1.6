@@ -1,6 +1,6 @@
 'use strict';
 
-function menu(menuSelector, btnsSelector) {
+function menu(menuSelector, btnsSelector) { 
     const menu = document.querySelector(`.${menuSelector}`);
     const menuBtns = document.querySelectorAll(`.${btnsSelector}`);
 
@@ -19,15 +19,20 @@ function menu(menuSelector, btnsSelector) {
             menu.classList.remove(`${menuSelector}--visible`);
             setTimeout(() => {
                 menu.classList.remove(`${menuSelector}--show`);
-            }, 150);
+            }, 50);
         } else {
             menu.classList.add(`${menuSelector}--show`);
             setTimeout(() => {
                 menu.classList.add(`${menuSelector}--visible`);
-            }, 150);
+            }, 50);
             setTimeout(() => {
-                menu.scrollIntoView({block: "center", behavior: "smooth"})
-            }, 500);
+                menu.scrollIntoView({block: "center", behavior: "smooth"});
+                if(menu.classList.contains('modal')) {
+                   setTimeout(() => {
+                    menu.querySelector('input').focus();
+                   }, 350) 
+                }
+            }, 300);
         }
     };
 };

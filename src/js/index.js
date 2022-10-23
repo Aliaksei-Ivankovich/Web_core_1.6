@@ -4,15 +4,39 @@ import '../scss/style.scss';
 
 import slider from './modules/slider.js';
 import menu from './modules/menu.js';
-import showMore from './modules/show-more.js';
+import showMore from './modules/show-more.js'; 
 import navMenu from './modules/nav-menu.js';
 
 addEventListener('DOMContentLoaded', () => {
     navMenu('nav-menu', 'nav-menu__item')
 
-    showMore('info-content--brands', 'content-button', 'slider', '--show-all-brands', 'Показать все');
-    showMore('info-content--types', 'content-button', 'slider', '--show-all-types', 'Показать все');
-    showMore('about__content', 'content-button', 'about__text-wpapper', '--show-all-text', 'Читать далее');
+    const brands = {
+        sectionSelector: 'info-content--brands', 
+        btnSelector: 'content-button', 
+        wrapperSelector: 'slider', 
+        toggleClass: '--show-all-brands', 
+        btnText: 'Показать все'
+    }
+
+    const types = {
+        sectionSelector: 'info-content--types', 
+        btnSelector: 'content-button', 
+        wrapperSelector: 'slider', 
+        toggleClass: '--show-all-types', 
+        btnText: 'Показать все'
+    }
+
+    const about = {
+        sectionSelector: 'about__content', 
+        btnSelector: 'content-button', 
+        wrapperSelector: 'about__text-wpapper', 
+        toggleClass: '--show-all-text', 
+        btnText: 'Читать далее'
+    }
+
+    showMore(brands);
+    showMore(types);
+    showMore(about);
 
     menu('mobile-menu', 'menu-button--burger');
     menu('modal--feedback', 'menu-button--feedback');

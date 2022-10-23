@@ -11,17 +11,25 @@
     background-color: $menuButtonColor;
     cursor: pointer;    
     outline-color: $beforeColor;
+    &:not(.menu-button__desctop):hover {
+        border: 2px solid $beforeColor;
+    }
 
     &__desctop {
         justify-content: space-between;
         width: auto;
         height: auto;
         background-color: $bgColor;
-        border-radius: 0;
+        border-radius: 6px;
         font-family: TT lakes, sans-serif;
         font-size: 16px;
         white-space: nowrap;
         gap: 0.17rem;
+        transition: background-color 250ms ease-in-out;
+        &:hover {
+            color: $textColor;
+            background-color: rgba(0, 0, 0, 0.05); 
+        }
     }
 
     &__image {
@@ -47,7 +55,4 @@
         }
     }
 }
-
-
-
 

@@ -10,12 +10,20 @@
     list-style: none;
 
     &__item {
+        position: relative;
         display: flex;
         align-items: center;
+        border: 2px solid $bgColor;
+        border-radius: 6px;
+        transition: background-color 250ms ease-in-out;
         &--active {
             border: 2px solid $navBorderColor;
             border-radius: 6px;
             background-color: $bgWhiteColor;
+        }
+
+        &:not(.nav-menu__item--active):hover {
+            background-color: rgba(0, 0, 0, 0.05); 
         }
     }
 
@@ -28,6 +36,9 @@
         letter-spacing: -0.2px;
         white-space: nowrap;
         outline-color: $contentButtonColor;
+        &:hover {
+            color: $textColor;
+        }
     }
 }
 

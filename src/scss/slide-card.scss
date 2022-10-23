@@ -10,6 +10,7 @@
     background-color: $bgWhiteColor;
     border: 1px solid $slideCardBorderColor;
     border-radius: 6px; 
+    cursor: pointer;
     &:hover {
         border: 1px solid $menuButtonColor;
     }
